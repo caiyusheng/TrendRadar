@@ -11,7 +11,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/sansan0/TrendRadar?style=flat-square&logo=github&color=yellow)](https://github.com/sansan0/TrendRadar/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/sansan0/TrendRadar?style=flat-square&logo=github&color=blue)](https://github.com/sansan0/TrendRadar/network/members)
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg?style=flat-square)](LICENSE)
-[![Version](https://img.shields.io/badge/version-v3.0.3-blue.svg)](https://github.com/sansan0/TrendRadar)
+[![Version](https://img.shields.io/badge/version-v3.0.4-blue.svg)](https://github.com/sansan0/TrendRadar)
 [![MCP](https://img.shields.io/badge/MCP-v1.0.1-green.svg)](https://github.com/sansan0/TrendRadar)
 
 [![企业微信通知](https://img.shields.io/badge/企业微信-通知-00D4AA?style=flat-square)](https://work.weixin.qq.com/)
@@ -47,7 +47,7 @@
 - 感谢**关注[公众号](#问题答疑与1元点赞)** 的读者们，你们的留言、点赞、分享和推荐等积极互动让内容更有温度😎。  
 
 <details>
-<summary>👉 点击查看<strong>致谢名单</strong> (当前 <strong>🔥42🔥</strong> 位)</summary>
+<summary>👉 点击查看<strong>致谢名单</strong> (当前 <strong>🔥43🔥</strong> 位)</summary>
 
 ### 数据支持
 
@@ -67,6 +67,7 @@
 
 |           点赞人            |  金额  |  日期  |             备注             |
 | :-------------------------: | :----: | :----: | :-----------------------: |
+|           Peter Fan          |  20  | 2025.10.29  |        | 
 |           M*n          |  1  | 2025.10.27  |      感谢开源  | 
 |           *许          |  8.88  | 2025.10.23  |      老师 小白一枚，摸了几天了还没整起来，求教  | 
 |           Eason           |  1  | 2025.10.22  |      还没整明白，但你在做好事  | 
@@ -521,13 +522,17 @@ GitHub 一键 Fork 即可使用，无需编程基础。
   - 统一所有工具的时间参数格式
 
 
-### 2025/10/23 - v3.0.3
+### 2025/10/31 - v3.0.4
 
-- 扩大 ntfy 错误信息显示范围
+- 解决飞书因推送内容过长而产生的错误，实现了分批推送
 
 
 <details>
 <summary><strong>👉 历史更新</strong></summary>
+
+### 2025/10/23 - v3.0.3
+
+- 扩大 ntfy 错误信息显示范围
 
 
 ### 2025/10/21 - v3.0.2
@@ -784,7 +789,7 @@ frequency_words.txt 文件增加了一个【必须词】功能，使用 + 号
 
 ## 🚀 快速开始
 
-> 部署成功后，新闻数据一般一小时后才会更新，如想加快，可参照【第4步】手动测试配置效果
+> 配置完成后，新闻数据一小时后才会更新，如想加快，可参照【第4步】手动测试配置效果
 
 1. **Fork 本项目**到你的 GitHub 账户
 
@@ -826,14 +831,16 @@ frequency_words.txt 文件增加了一个【必须词】功能，使用 + 号
 
    **GitHub Secret 配置：**
    - 名称：`FEISHU_WEBHOOK_URL`
-   - 值：你的飞书机器人 Webhook 地址
+   - 值：你的飞书机器人 Webhook 地址(该链接开头类似 https://www.feishu.cn/flow/api/trigger-webhook/********)
    <br>
 
-   有两个方案，**方案一**配置简单，**方案二**配置复杂(老方法)
+   有两个方案，**方案一**配置简单，**方案二**配置复杂(但是稳定推送)
 
-   其中方案一，由 **ziventian**发现并提供建议，在这里感谢他，默认是个人推送，也可以配置群组推送操作[#97](https://github.com/sansan0/TrendRadar/issues/97) 
+   其中方案一，由 **ziventian**发现并提供建议，在这里感谢他，默认是个人推送，也可以配置群组推送操作[#97](https://github.com/sansan0/TrendRadar/issues/97) ，
 
    **方案一：**
+
+   > 对部分人存在额外操作，否则会报"系统错误"。需要手机端搜索下机器人，然后开启飞书机器人应用(该建议来自于网友，可参考)
 
    1. 电脑浏览器打开 https://botbuilder.feishu.cn/home/my-command
 
